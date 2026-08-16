@@ -1,0 +1,75 @@
+:root {
+  --color-wine: #7a2e3b;
+  --color-wine-dark: #5c2029;
+  --color-gold: #b8894f;
+  --color-gold-light: #d9b77e;
+  --color-ink: #211c1e;
+  --color-ivory: #fbf7f3;
+  --color-ivory-dim: #f3ece5;
+  --color-gray: #8b7d80;
+  --color-gray-light: #e4dad3;
+  --color-success: #6b8f71;
+  --color-danger: #a23e36;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 4px 24px rgba(33, 28, 30, 0.8);
+  --shadow-lift: 0 8px 32px rgba(33, 28, 30, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background: var(--color-ivory);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
