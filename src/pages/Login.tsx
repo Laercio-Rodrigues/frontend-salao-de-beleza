@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useState, type SyntheticEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { api } from '../api/client'
 import { useAuth } from '../context/useAuth'
@@ -26,7 +26,7 @@ export function Login() {
   const { login } = useAuth()
   const navigate = useNavigate()
 
-  async function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: SyntheticEvent) {
     event.preventDefault()
     setError('')
     setIsLoading(true)
