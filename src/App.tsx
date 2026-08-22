@@ -5,6 +5,7 @@ import { AppLayout } from './layouts/AppLayout'
 import { ClientsPage } from './pages/clients/ClientsPage'
 import { ProfessionalsPage } from './pages/professionals/ProfessionalsPage'
 import { ServicesPage } from './pages/services/ServicesPage'
+import { AgendaPage } from './pages/agenda/AgendaPage'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/clientes" element={<ClientsPage />} />
         <Route path="/profissionais" element={<ProfessionalsPage />} />
         <Route path="/servicos" element={<ServicesPage />} />
+        <Route path='/agenda' element={<AgendaPage />} />
       </Route>
     </Routes>
   )

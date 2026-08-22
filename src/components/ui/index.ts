@@ -1,5 +1,7 @@
 export { Button } from './Button'
 export { TextField } from './TextField'
+export { Select } from './Select'
 export { Alert } from './Alert'
 export { Table, Thead, Th, Td, Tr, EmptyState } from './Table'
 export { Modal } from './Modal'
+export { PageHeader } from './PageHeader'

@@ -1,4 +1,4 @@
-import { forwardRef, type InputHTMLAttributes } from 'react'
+import { forwardRef, type SelectHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.label`
@@ -13,7 +13,7 @@ const Wrapper = styled.label`
   }
 `
 
-const Input = styled.input`
+const StyledSelect = styled.select`
   border: 1px solid var(--color-gray-light);
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.9rem;
@@ -27,19 +27,21 @@ const Input = styled.input`
   }
 `
 
-interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
+interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label: string
 }
 
-export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-  ({ label, ...inputProps }, ref) => {
+export const Select = forwardRef<HTMLSelectElement, SelectProps>(
+  ({ label, children, ...selectProps }, ref) => {
     return (
       <Wrapper>
         <span>{label}</span>
-        <Input ref={ref} {...inputProps} />
+        <StyledSelect ref={ref} {...selectProps}>
+          {children}
+        </StyledSelect>
       </Wrapper>
     )
   },
 )
 
-TextField.displayName = 'TextField'
+Select.displayName = 'Select'
